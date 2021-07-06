@@ -1,0 +1,96 @@
+@import url(http://fonts.googleapis.com/css?family=Vollkorn|Roboto);
+.toggle-click {
+    position: fixed;
+    top: 8px;
+    left: 15px;
+    padding: 9px 10px;
+    margin: 8px 15px 8px 0;
+    height: 20px;
+    width: 35px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.overlay {
+    position: fixed;
+    background-color: orangered;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: opacity .35s, visibility .35s, height .35s;
+}
+.nav-active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+/*    max-height: 340px;*/
+}
+.overlay ul {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 0;
+    font-size: 45px;
+    font-weight: 400;
+    list-style: none;
+    padding: 0;
+    letter-spacing: 0em;
+}
+.overlay ul li {
+    display: block;
+}
+.overlay ul li a {
+    color: black;
+    text-decoration: none;
+    padding-left: 40px;
+    font-weight: 300;
+}
+
+.overlay ul li a:hover{
+    text-decoration-color: white;
+    text-decoration-line: underline;
+}
+
+.toggle-click:hover{
+    text-decoration: underline;
+}
+
+.about {
+    color: white;
+}
+
+@media screen and (max-width:750px){
+.overlay ul {
+    font-size: 1.5em;
+    text-align: left;
+    }
+
+
+.column column-25{
+    display:inline;
+    position: absolute;
+    float: none;
+    margin:0; 
+    }
+}
+
+
+/* image pop-up on hover */
+#winteregg img {
+    display:none;
+    text-decoration: none;
+    width: 800px;
+}
+
+#winteregg:hover  img{ 
+    display:block;
+    position: absolute;
+    left: 400px;
+    width: 800px;
+    text-decoration: none;
+    z-index:99;
+    
+}
